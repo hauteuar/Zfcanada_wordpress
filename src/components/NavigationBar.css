@@ -1,0 +1,113 @@
+/* NavigationBar.css */
+.navbar {
+    background-color: white; /* Example color */
+    display: flex;
+    align-items: center;
+    position: relative; /* Allows absolute positioning relative to navbar */
+    z-index: 10; /* Ensures navbar is above the slider */
+    padding: 0 30px; /* Padding on the sides */
+    transition: top 0.3s; /* Smooth transition for when it sticks to the top */
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it's above other content */
+}
+/* Logo is positioned absolutely and is allowed to overlap with the slider below */
+.navbar-logo {
+    position: absolute;
+    top: 0; /* Align with the top of the navbar */
+    left: 7%; /* Space from the left side */
+    z-index: 5; /* Below the navbar but above other content */
+}
+
+    /* Ensure logo image doesn't exceed its container */
+    .navbar-logo img {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+.navbar-nav {
+    list-style-type: none;
+    display: flex;
+    padding-left: 300px; /* Adjust this value to account for your logo's width */
+    margin: 0;
+    height: 100%;
+}
+
+.nav-item {
+    position: relative; /* Dropdowns will position relative to this */
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+}
+
+    .nav-item:hover .dropdown-menu {
+        display: block; /* Show dropdown on hover */
+    }
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    width: 200px; /* Set a fixed width or make it dynamic based on content */
+    top: 100%; /* Positioned at the bottom of the nav-item */
+    left: 0;
+}
+
+    .dropdown-menu a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        border-bottom: 1px solid #ddd;
+    }
+
+        .dropdown-menu a:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #f0f0f0;
+        }
+
+/* ... further styling and responsive adjustments ... */
+
+/* ... additional styling and media queries ... */
+
+
+/* ... other styles remain unchanged ... */
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar-logo,
+    .navbar-nav {
+        width: auto;
+        height: auto;
+    }
+
+    .navbar-logo {
+        margin-bottom: 20px; /* Add space between logo and nav links on smaller screens */
+    }
+
+    .nav-link {
+        padding: 10px;
+    }
+
+    .navbar-search {
+        order: -1; /* Search goes on top on smaller screens */
+        width: 100%; /* Full width search bar */
+        padding: 10px 20px; /* Add padding for touch targets */
+    }
+}

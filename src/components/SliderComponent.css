@@ -1,0 +1,128 @@
+/* SliderComponent.css */
+
+
+.slider-image {
+    position: relative;
+    width: 100%; /* Covers the full width of the slide */
+    height: 100vh; /* Covers the full viewport height */
+    object-fit: cover;/* Ensures the image covers the area, may result in cropping */
+    z-index: 1;
+}
+
+.swiper {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.swiper-slide {
+    position: relative !important; /* Set the position to relative */
+    width: 100%;
+    height: 100vh; /* Full height to match the slider container */
+    text-align: center;
+    font-size: 18px;
+    z-index: 1;
+}
+    .swiper-slide img {
+        position: relative;
+        width: 100vw; /* Fill the full viewport width */
+        height: 100vh; /* Fill the full viewport height */
+        object-fit: cover; /* Cover the whole area, may result in cropping */
+    }
+  
+
+/* SliderComponent.css */
+/* ... Other styles ... */
+
+.slider-caption {
+    position: absolute;
+    top: 30%; /* Center vertically */
+    left: 20%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center alignment */
+    color: #fff;
+    text-align: center;
+    z-index: 10; /* Above the image */
+
+}
+.slide-caption {
+    position: absolute;
+    top: 60%; /* Center vertically */
+    left: 25%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center alignment */
+    color: #fff;
+    text-align: center;
+    z-index: 10; /* Above the image */
+}
+
+
+.caption-title {
+    display: inline-block; /* Make the element inline for border to wrap text only */
+    border: 2px solid #ff0000; /* Red border */
+    color: #ff0000; /* Red text color to match the border */
+    font-size: 1rem; /* Adjust size as needed */
+    font-weight: bold;
+    padding: 0.5rem 1rem; /* Padding inside the border */
+    background-color: transparent; /* Transparent background */
+    margin-bottom: 0.5rem; /* Space below the welcome message */
+    align-content: flex-start;
+    text-transform: uppercase;
+}
+
+/* ... Other styles ... */
+
+
+.caption-heading_1 {
+    color: #000000; /* Main heading color */
+    font-size: 3.0rem; /* Large font size for the main heading */
+    
+    text-transform: capitalize;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.2; /* Adjust line spacing to fit design */
+    margin-bottom: 1rem; /* Space below the main heading */
+    margin-right: 5%;
+    align-content: flex-start;
+}
+
+.caption-heading_2 {
+    color: #ff006e; /* Main heading color */
+    font-size: 3.0rem; /* Large font size for the main heading */
+    font-weight: bold;
+    text-transform: capitalize;
+    font-family:'Times New Roman', Times, serif;
+    line-height: 1.2; /* Adjust line spacing to fit design */
+    margin-bottom: 1rem; /* Space below the main heading */
+    margin-right: 5%;
+    align-content: flex-start;
+}
+
+.caption-heading_3 {
+    color: #000000; /* Main heading color */
+    font-size: 3.0rem; /* Large font size for the main heading */
+    font-weight: bold;
+    text-transform: capitalize;
+    line-height: 1.2; /* Adjust line spacing to fit design */
+    margin-bottom: 1rem; /* Space below the main heading */
+    margin-right: 5%;
+    align-content: flex-start;
+}
+.caption-subheading {
+    color: #ffffff; /* White color for the subheading */
+    font-size: 1rem; /* Adjust size as needed */
+    margin-bottom: 2rem; /* Space below the subheading */
+}
+
+.caption-button {
+    background-color: #ff0000; /* Red background for the button */
+    color: #ffffff; /* White text color */
+    border: none;
+    padding: 1rem 2rem; /* Larger padding for a wider button */
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-radius: 50px; /* Rounded edges for the button */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+}
+
+    .caption-button:hover {
+        background-color: #cc0000; /* Slightly darker shade on hover */
+    }

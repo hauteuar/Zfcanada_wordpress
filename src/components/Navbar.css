@@ -1,0 +1,44 @@
+.navbar {
+    /* Navbar styles */
+    position: absolute;
+    z-index: 10; /* Higher z-index for the logo to overflow */
+}
+
+.logo {
+    /* Logo styles */
+    position: absolute;
+    z-index: 11; /* Higher than navbar z-index */
+    top: -20px; /* Adjust as needed for overflow */
+}
+
+.nav-links a {
+    /* Link styles */
+    font-family: 'YourFont', sans-serif; /* Replace with your font */
+    position: relative;
+}
+
+.nav-links .arrow-down {
+    /* Arrow styles */
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #000;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.search-container {
+    /* Search input styles */
+}
+
+.menu-icon {
+    /* Menu icon styles */
+    cursor: pointer;
+}
+
+.side-menu {
+    /* Side menu/modal styles similar to the second image */
+    position: absolute;
+    /* Other styles to match the design */
+}

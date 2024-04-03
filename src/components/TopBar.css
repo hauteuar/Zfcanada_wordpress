@@ -1,0 +1,112 @@
+/* TopBar.css */
+.topbar {
+    background-color: #000006; /* Background color for the top bar */
+    color: white; /* Default text color */
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+    transition: top 0.3s;
+    position: relative; /* Needed for absolute positioning of children */
+}
+
+.topbar-social a {
+
+    color: white; /* Icon color */
+    margin-right: 20px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: transform 0.3s, color 0.3s;
+}
+
+    .topbar-social a:hover {
+        transform: translateY(-5px); /* Move up on hover */
+        color: red; /* Change color on hover */
+    }
+
+.icon {
+    color: red;
+    margin-right: 5px;
+}
+
+.topbar-contact {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1; /* Allows centering within the remaining space */
+}
+
+    .topbar-contact span, .topbar-contact a {
+        margin-left: 15px;
+        font-size: 0.9rem;
+        transition: color 0.3s;
+    }
+
+        .topbar-contact a:hover, .topbar-contact span:hover {
+            color: red; /* Text color changes to red on hover */
+        }
+
+/* Style for the phone number box */
+.phone-box {
+    background-color: #c00; /* Red background */
+    color: white; /* White text */
+    padding: 10px 20px;
+    border-radius: 0px;
+    font-weight: bold;
+    font-size: large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+
+    right: 10px; /* Adjusted to 10px from the right edge */
+    top: 0; /* Positioned 10px from the top */
+    bottom: 0;
+    z-index: 2;
+    overflow: hidden; /* Ensure that the content rolling up is hidden */
+    height: 60px; /* Fixed height */
+}
+
+/* Container for the phone numbers */
+.phone-numbers {
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+/* On hover, move the phone numbers up to reveal the second one */
+.phone-box:hover .phone-numbers {
+    transform: translateY(-100%); /* Move up by 100% of the current number's height */
+}
+
+
+@media (max-width: 768px) {
+    .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .topbar-contact {
+        order: 3; /* Ensure contact info is below social icons */
+        width: 100%; /* Take full width */
+        justify-content: space-between; /* Space out items */
+        margin-top: 10px;
+    }
+
+    .topbar-social, .phone-box {
+        order: 1; /* Social icons and phone box go first */
+        width: 100%; /* Take full width */
+    }
+
+    .topbar-social {
+        justify-content: flex-start;
+    }
+
+    .phone-box {
+        order: 2; /* Phone box goes after social icons */
+        justify-content: flex-end;
+    }
+}
+
+.hide {
+    top: -100%; /* Adjust as needed to fully hide the TopBar */
+}
